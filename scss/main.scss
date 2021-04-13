@@ -1,0 +1,27 @@
+:root{
+    --base: 10px;
+    --blur: 10px;
+    --colors: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+    color: white;
+}
+.header{
+    margin: 1rem;
+}
+.slider{
+    background: url(../img/aerial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    width: 30em;
+    padding: 40% 0px;
+}
+.wrapper{
+    background: rgba($color: var(--colors), $alpha: 0.9);
+}

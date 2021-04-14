@@ -10,14 +10,21 @@
 <body>
     <h2 class="header">CSS Slider <span class="header--mad">Madness</span></h2>
     <div class="slider">
-        <div class="wrapper">
-            <p class="slider__title">Blur</p>
-            <input type="range" class="slider__input">
-            <p class="slider__title">Border</p>
-            <input type="range" class="slider__input">
-            <p class="slider__title">Color</p>
-            <input type="color" class="slider__input">
+        <div class="slider__wrapper">
+            <div class="slider__item"> 
+                <p class="slider__title">Blur</p>
+                <input type="range" name="blur" value="0" min="0" max="25" class="slider__input">
+            </div>
+            <div class="slider__item">
+                <p class="slider__title">Color</p>
+                <input type="color" name="colors" value="#fc0808" class="slider__input">  
+            </div>
+            <div class="slider__item">
+                <p class="slider__title">Focus</p>
+                <input type="range" name="base" value="0" min="0" max="100" class="slider__input">
+            </div>
         </div>
     </div>
+    <script src="../js/main.js"></script>
 </body>
 </html>

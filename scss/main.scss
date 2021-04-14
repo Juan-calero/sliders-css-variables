@@ -1,7 +1,7 @@
 :root{
     --base: 10px;
     --blur: 10px;
-    --colors: #000000;
+    --colors: #fc0808;
 }
 
 *{
@@ -11,17 +11,59 @@
     text-align: center;
     color: white;
 }
+body{
+    background: rgb(26, 26, 26);
+    overflow: hidden;
+}
 .header{
-    margin: 1rem;
+    z-index: 2;
+    position:absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    &--mad{
+        text-transform: uppercase;
+        color: var(--colors);
+   
+    }
+}
+.wrapper{
+    position: relative;
+    padding: 10px;
+    &::before{
+        content: "";
+        opacity: 0.5;
+        background: var(--colors);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+    }
 }
 .slider{
+    margin: auto;
     background: url(../img/aerial.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: auto;
     width: 30em;
-    padding: 40% 0px;
-}
-.wrapper{
-    background: rgba($color: var(--colors), $alpha: 0.9);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &::before{
+        position: absolute;
+        content: "";
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: radial-gradient(rgba(0,0,0,0) 10%, rgba(0,0,0,1));
+    }
+    &__title{
+        position: relative;
+    }
+    &__input{
+        position: relative;
+    }
 }

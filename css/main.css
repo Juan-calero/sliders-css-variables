@@ -1,7 +1,7 @@
 :root {
   --base: 10px;
   --blur: 10px;
-  --colors: #000000;
+  --colors: #fc0808;
 }
 
 * {
@@ -12,20 +12,74 @@
   color: white;
 }
 
-.header {
-  margin: 1rem;
+body {
+  background: #1a1a1a;
+  overflow: hidden;
 }
 
-.slider {
-  background: url(../img/aerial.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: auto;
-  width: 30em;
-  padding: 40% 0px;
+.header {
+  z-index: 2;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+}
+
+.header--mad {
+  text-transform: uppercase;
+  color: var(--colors);
 }
 
 .wrapper {
-  background: rgba(var(--colors), 0.9);
+  position: relative;
+  padding: 10px;
+}
+
+.wrapper::before {
+  content: "";
+  opacity: 0.5;
+  background: var(--colors);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.slider {
+  margin: auto;
+  background: url(../img/aerial.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30em;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: radial-gradient(rgba(0, 0, 0, 0) 10%, black);
+}
+
+.slider__title {
+  position: relative;
+}
+
+.slider__input {
+  position: relative;
 }
 /*# sourceMappingURL=main.css.map */
